@@ -2,6 +2,9 @@
 Returns and prints the contents of the manifest and pom.properties file of a given jar file
 in the dictionary format.
 
+Originaly, This is forked from https://github.com/badari412/jarmanifestreader.
+I added function to find metafiles(MANIFES.MF and pom.properties). 
+
 Compatible with python versions > 3.x versions. 
 
 Installation:
