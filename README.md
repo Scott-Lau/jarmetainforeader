@@ -1,13 +1,13 @@
-# jarmanifestreader
-Returns and prints the contents of the manifest file of a given jar file
+# jarmetainforeader
+Returns and prints the contents of the manifest and pom.properties file of a given jar file
 in the dictionary format.
 
-Compatible with python versions > 2.7 and 3.x versions. 
+Compatible with python versions > 3.x versions. 
 
 Installation:
 
 ```
-pip install jarmanifestreader
+pip install jarmetainforeader
 ```
 
 Sample usage:
