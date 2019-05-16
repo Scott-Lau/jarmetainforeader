@@ -16,7 +16,7 @@ pip install jarmetainforeader
 Sample usage:
 
 ```
->>> from jarmanifestreader import manifest_file_reader
+>>> from jarmetainforeader import meta_file_reader
 >>> manifest_file_reader.get_manifest_contents('/Volumes/backup_disk/clarity/clarity_automation_test/clarity_db/central/indy-diagnostics-jaxrs/indy-diagnostics-jaxrs-1.3.0.jar')
 {'Manifest-Version': '1.0', 'Archiver-Version': 'Plexus Archiver', 'Built-By': 'jdcasey', 'Created-By': 'Apache Maven 3.5.0', 'Build-Jdk': '1.8.0_171', 'version': '1.3.0', 'groupId': 'org.commonjava.indy', 'artifactId': 'indy-diagnostics-jaxrs'}
 >>>
