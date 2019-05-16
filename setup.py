@@ -1,9 +1,12 @@
-from setuptools import setup, find_packages
+import setuptools
 
-setup(
-    name='jarmetainforeader',  # How you named your package folder (MyLib)
+with open("README.md", "r") as fh:
+    long_description = fh.read()
+
+setuptools.setup(
+    name='jarmetainforeader',  
     packages=['jarmetainforeader'],  # Chose the same as "name"
-    version='0.2',  # Start with a small number and increase it with every change you make
+    version='0.2.0',  # Start with a small number and increase it with every change you make
     license='MIT',  # Chose a license from here: https://help.github.com/articles/licensing-a-repository
     description='Returns the contents of the manifest and pom.properties file of a given jar file in the dictionary format. This is originaly repository https://github.com/badari412/jarmanifestreader. This is forked. I added function to find metainfo file to read pom.properties and MANIFES file',
     # Give a short description about your library
@@ -13,6 +16,8 @@ setup(
     download_url='https://github.com/secuof/jarmetainforeader/archive/master.zip',  # I explain this later on
     keywords=['PYTHON', 'JAR', 'MANIFEST', 'POM', 'JAR INFO READER' 'MANIFESTREADER', 'READER'],  # Keywords that define your package best
     python_requires  = '>=3',
+    long_description=long_description,
+    long_description_content_type="text/markdown",
 
     classifiers=[
         'Development Status :: 5 - Production/Stable',

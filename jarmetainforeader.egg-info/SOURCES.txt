@@ -1,0 +1,9 @@
+README.md
+setup.cfg
+setup.py
+jarmetainforeader/__init__.py
+jarmetainforeader/meta_file_reader.py
+jarmetainforeader.egg-info/PKG-INFO
+jarmetainforeader.egg-info/SOURCES.txt
+jarmetainforeader.egg-info/dependency_links.txt
+jarmetainforeader.egg-info/top_level.txt
