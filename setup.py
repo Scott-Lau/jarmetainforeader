@@ -9,7 +9,7 @@ with open('requirements.txt') as f:
 setuptools.setup(
     name='jarmetainforeader',  
     packages=['jarmetainforeader'],  # Chose the same as "name"
-    version='0.3.0',  # Start with a small number and increase it with every change you make
+    version='0.3.1',  # Start with a small number and increase it with every change you make
     license='MIT',  # Chose a license from here: https://help.github.com/articles/licensing-a-repository
     description='Returns the contents of the manifest and pom.properties file of a given jar file in the dictionary format. This is originaly repository https://github.com/badari412/jarmanifestreader. This is forked. I added function to find metainfo file to read pom.properties and MANIFES file',
     # Give a short description about your library
