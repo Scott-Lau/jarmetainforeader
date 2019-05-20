@@ -1,5 +1,4 @@
 import setuptools
-from jarmetainforeader import meta_file_reader
 
 with open("README.md", "r") as fh:
     long_description = fh.read()
