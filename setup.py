@@ -15,11 +15,12 @@ setuptools.setup(
     url='https://github.com/secuof/jarmetainforeader.git',  # Provide either the link to your github or to your website
     download_url='https://github.com/secuof/jarmetainforeader/archive/master.zip',  # I explain this later on
     keywords=['PYTHON', 'JAR', 'MANIFEST', 'POM', 'JAR INFO READER' 'MANIFESTREADER', 'READER'],  # Keywords that define your package best
-    install_requires = ['xmltodict']
+    install_requires = ['xmltodict'],
     python_requires  = '>=3',
     long_description=long_description,
     long_description_content_type="text/markdown",
-
+    zip_safe=False,
+    
     classifiers=[
         'Development Status :: 5 - Production/Stable',
         # Chose either "3 - Alpha", "4 - Beta" or "5 - Production/Stable" as the current state of your package
