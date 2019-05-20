@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: jarmetainforeader
-Version: 0.3.0
+Version: 0.3.1
 Summary: Returns the contents of the manifest and pom.properties file of a given jar file in the dictionary format. This is originaly repository https://github.com/badari412/jarmanifestreader. This is forked. I added function to find metainfo file to read pom.properties and MANIFES file
 Home-page: https://github.com/secuof/jarmetainforeader.git
 Author: David Hong
