@@ -30,15 +30,11 @@ def _get_manifest_file_contents(jar_file_path):
 
 def _get_pom_xml_file_contents(jar_file_path):
     with zipfile.ZipFile(jar_file_path) as z:
-        # att_list = []
         for name in z.namelist():
             if 'pom.xml' in name:
                 with z.open(name) as fd:
                     pom_xml_json = json.dumps(xmltodict.parse(fd.read()))
                     pom_xml_dict = json.loads(pom_xml_json)
-                    print(name)
-                    print(type(pom_xml_json))
-                    print(pom_xml_dict)
             else:
                 pass
         return pom_xml_dict
@@ -94,7 +90,3 @@ def get_pomxml_file_contents(jar_file_path):
 
 def print_pomxml_contents(jar_file_path):
     print(get_pomxml_file_contents(jar_file_path))
-
-print_manifest_contents('/Volumes/backup_disk/clarity/clarity_automation_test/clarity_db/central/nexus-plugin-console-plugin/nexus-plugin-console-plugin-1.7.2.jar')
-print_pom_properties_contents('/Volumes/backup_disk/clarity/clarity_automation_test/clarity_db/central/nexus-plugin-console-plugin/nexus-plugin-console-plugin-1.7.2.jar')
-get_pomxml_file_contents('/Volumes/backup_disk/clarity/clarity_automation_test/clarity_db/central/nexus-plugin-console-plugin/nexus-plugin-console-plugin-1.7.2.jar')

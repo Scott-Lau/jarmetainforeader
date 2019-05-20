@@ -1,9 +1,8 @@
 # jarmetainforeader
-Returns and prints the contents of the manifest and pom.properties file of a given jar file
-in the dictionary format.
+Returns and prints the contents of the manifest, pom.xml and pom.properties file of a given jar file in the dictionary format.
 
 Originaly, This is forked from https://github.com/badari412/jarmanifestreader.
-I added function to find metafiles(MANIFES.MF and pom.properties). 
+I added function to find metafiles(MANIFES.MF, pom.xml and pom.properties). 
 
 Compatible with python versions > 3.x versions. 
 
@@ -15,12 +14,27 @@ pip install jarmetainforeader
 
 Sample usage:
 
+If you want to print result
 ```
 >>> from jarmetainforeader import meta_file_reader
->>> meta_file_reader.get_metainfo_contents('/Volumes/backup_disk/clarity/clarity_automation_test/clarity_db/central/indy-diagnostics-jaxrs/indy-diagnostics-jaxrs-1.3.0.jar')
-{'Manifest-Version': '1.0', 'Archiver-Version': 'Plexus Archiver', 'Built-By': 'jdcasey', 'Created-By': 'Apache Maven 3.5.0', 'Build-Jdk': '1.8.0_171', 'version': '1.3.0', 'groupId': 'org.commonjava.indy', 'artifactId': 'indy-diagnostics-jaxrs'}
+>>> meta_file_reader.print_manifest_contents('/Users/secuof/Downloads/commons-lang-2.4.jar')
+
 >>>
->>> meta_file_reader.print_metainfo_contents('/Volumes/backup_disk/clarity/clarity_automation_test/clarity_db/central/indy-diagnostics-jaxrs/indy-diagnostics-jaxrs-1.3.0.jar')
-{'Manifest-Version': '1.0', 'Archiver-Version': 'Plexus Archiver', 'Built-By': 'jdcasey', 'Created-By': 'Apache Maven 3.5.0', 'Build-Jdk': '1.8.0_171', 'version': '1.3.0', 'groupId': 'org.commonjava.indy', 'artifactId': 'indy-diagnostics-jaxrs'}
+>>> meta_file_reader.print_pom_properties_contents('/Users/secuof/Downloads/commons-lang-2.4.jar')
+
+>>>
+>>> meta_file_reader.print_pomxml_contents('/Users/secuof/Downloads/commons-lang-2.4.jar')
+
+```
+If you want to get data
+```
+>>> from jarmetainforeader import meta_file_reader
+>>> meta_file_reader.get_manifest_contents('/Users/secuof/Downloads/commons-lang-2.4.jar')
+
+>>>
+>>> meta_file_reader.get_pom_properties_contents('/Users/secuof/Downloads/commons-lang-2.4.jar')
+
+>>>
+>>> meta_file_reader.get_pomxml_contents('/Users/secuof/Downloads/commons-lang-2.4.jar')
 
 ```
