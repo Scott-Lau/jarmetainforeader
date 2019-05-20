@@ -30,14 +30,16 @@ def _get_manifest_file_contents(jar_file_path):
 
 def _get_pom_xml_file_contents(jar_file_path):
     with zipfile.ZipFile(jar_file_path) as z:
+        pom_xml_dict_list = {}
         for name in z.namelist():
             if 'pom.xml' in name:
                 with z.open(name) as fd:
                     pom_xml_json = json.dumps(xmltodict.parse(fd.read()))
                     pom_xml_dict = json.loads(pom_xml_json)
+                    pom_xml_dict_list.update(pom_xml_dict)
             else:
                 pass
-        return pom_xml_dict
+        return pom_xml_dict_list
 
 def _format_attributes(metainfo_file_contents):
     metainfo_contents = {}
