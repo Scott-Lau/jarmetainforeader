@@ -3,6 +3,9 @@ import setuptools
 with open("README.md", "r") as fh:
     long_description = fh.read()
 
+with open('requirements.txt') as f:
+    requirements = f.read().splitlines()
+
 setuptools.setup(
     name='jarmetainforeader',  
     packages=['jarmetainforeader'],  # Chose the same as "name"
@@ -15,7 +18,7 @@ setuptools.setup(
     url='https://github.com/secuof/jarmetainforeader.git',  # Provide either the link to your github or to your website
     download_url='https://github.com/secuof/jarmetainforeader/archive/master.zip',  # I explain this later on
     keywords=['PYTHON', 'JAR', 'MANIFEST', 'POM', 'JAR INFO READER' 'MANIFESTREADER', 'READER'],  # Keywords that define your package best
-    install_requires = ['xmltodict'],
+    install_requires=requirements,
     python_requires  = '>=3',
     long_description=long_description,
     long_description_content_type="text/markdown",
